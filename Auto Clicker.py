@@ -1,5 +1,10 @@
 from tkinter import *
 
+
+def Exit():
+    root.destroy()
+
+
 root = Tk()
 root.title('Auto Clicker')
 root.geometry('230x110')
@@ -8,12 +13,12 @@ root.resizable(width=False, height=False)
 main_menu = Menu()
 
 file_menu = Menu(tearoff=0)
-file_menu.add_command(label="Exit")
+file_menu.add_command(label="Exit", command=Exit)
 
 Options_menu = Menu(tearoff=0)
-Options_menu.add_command(label="1")
-Options_menu.add_command(label="2")
-Options_menu.add_command(label="3")
+Options_menu.add_command(label="Clicking")
+Options_menu.add_command(label="Recording")
+Options_menu.add_command(label="Settings")
 
 Help_menu = Menu(tearoff=0)
 Help_menu.add_command(label="About")
