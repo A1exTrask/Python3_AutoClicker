@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()
 root.title('Click counter')
-root.geometry('200x200')
+root.geometry('150x130')
 root.resizable(width=False, height=False)
 
 count = 0
