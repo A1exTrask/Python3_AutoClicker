@@ -60,5 +60,4 @@ m1.place(x=15, y=12)
 m2 = Button(root, text="Help >>", padx="72", pady="5")
 m2.place(x=15, y=60)
 
-
 root.mainloop()
