@@ -11,9 +11,13 @@ def About():
 
 
 root = Tk()
-root.title('Auto Clicker')
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
+root.wm_geometry("+%d+%d" % (x, y))
 root.geometry('230x110')
+root.title('Auto Clicker')
 root.resizable(width=False, height=False)
+root.attributes('-topmost', 1)
 
 main_menu = Menu()
 
