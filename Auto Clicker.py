@@ -21,11 +21,28 @@ file_menu = Menu(tearoff=0)
 file_menu.add_command(label="Exit", command=Exit)
 
 Options_menu = Menu(tearoff=0)
-Options_menu.add_command(label="Clicking")
-Options_menu.add_command(label="Recording")
-Options_menu.add_command(label="Settings")
+
+Clicking_menu = Menu(Options_menu, tearoff=0)
+
+Clicking_menu.add_command(label="Options")
+Clicking_menu.add_command(label="Repeat")
+
+Recording_menu = Menu(Options_menu, tearoff=0)
+
+Recording_menu.add_command(label="Multiple clicks")
+
+Settings_menu = Menu(Options_menu, tearoff=0)
+
+Settings_menu.add_command(label="Hotkey")
+Settings_menu.add_command(label="View")
+Settings_menu.add_command(label="Other")
+
+Options_menu.add_cascade(label="Clicking", menu=Clicking_menu)
+Options_menu.add_cascade(label="Recording", menu=Recording_menu)
+Options_menu.add_cascade(label="Settings", menu=Settings_menu)
 
 Help_menu = Menu(tearoff=0)
+Help_menu.add_command(label="How to automate a sequence of mouse clicks and keystrokes")
 Help_menu.add_command(label="About", command=About)
 
 main_menu.add_cascade(label="File", menu=file_menu)
