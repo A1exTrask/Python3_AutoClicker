@@ -54,4 +54,11 @@ main_menu.add_cascade(label="Options", menu=Options_menu)
 main_menu.add_cascade(label="Help", menu=Help_menu)
 
 root.config(menu=main_menu)
+
+m1 = Button(root, text='Press F8 to click', padx="53", pady="5")
+m1.place(x=15, y=12)
+m2 = Button(root, text="Help >>", padx="72", pady="5")
+m2.place(x=15, y=60)
+
+
 root.mainloop()
