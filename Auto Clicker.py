@@ -1,9 +1,14 @@
 from tkinter import *
 from tkinter import messagebox
+import webbrowser
 
 
 def Exit():
     root.destroy()
+
+
+def callback(event):
+    webbrowser.open_new(r"https://github.com/A1exTrask/Python3_AutoClicker")
 
 
 def About():
@@ -55,9 +60,10 @@ main_menu.add_cascade(label="Help", menu=Help_menu)
 
 root.config(menu=main_menu)
 
-m1 = Button(root, text='Press F8 to click', padx="53", pady="5")
+m1 = Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2")
 m1.place(x=15, y=12)
-m2 = Button(root, text="Help >>", padx="72", pady="5")
+m2 = Button(root, text="Help >>", padx="72", pady="5", cursor="hand2", command=callback)
 m2.place(x=15, y=60)
+m2.bind("<Button-1>", callback)
 
 root.mainloop()
