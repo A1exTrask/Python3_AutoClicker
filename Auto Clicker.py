@@ -8,7 +8,7 @@ def Exit():
 
 
 def callback(event):
-    webbrowser.open_new(r"https://github.com/A1exTrask/Python3_AutoClicker")
+    webbrowser.open_new("https://github.com/A1exTrask/Python3_AutoClicker")
 
 
 def About():
@@ -51,7 +51,7 @@ Options_menu.add_cascade(label="Recording", menu=Recording_menu)
 Options_menu.add_cascade(label="Settings", menu=Settings_menu)
 
 Help_menu = Menu(tearoff=0)
-Help_menu.add_command(label="How to automate a sequence of mouse clicks and keystrokes")
+Help_menu.add_command(label="How to automate a sequence of mouse clicks and keystrokes", command=callback)
 Help_menu.add_command(label="About", command=About)
 
 main_menu.add_cascade(label="File", menu=file_menu)
