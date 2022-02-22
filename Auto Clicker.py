@@ -15,6 +15,10 @@ def About():
     messagebox.showinfo(title='About', message='Auto Clicker \n \n Version 1.0', icon='info')
 
 
+def click():
+    w
+
+
 root = Tk()
 x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2
 y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
@@ -60,7 +64,7 @@ main_menu.add_cascade(label="Help", menu=Help_menu)
 
 root.config(menu=main_menu)
 
-m1 = Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2")
+m1 = Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2", command=click)
 m1.place(x=15, y=12)
 m2 = Button(root, text="Help >>", padx="72", pady="5", cursor="hand2", command=callback)
 m2.place(x=15, y=60)
