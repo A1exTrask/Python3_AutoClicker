@@ -1,6 +1,19 @@
 from tkinter import *
 from tkinter import messagebox
 import webbrowser
+import keyboard
+import mouse
+import time
+
+
+isClicking - False
+
+
+def click():
+    pass
+
+
+keyboard.add_hotkey("f8", click)
 
 
 def Exit():
@@ -13,10 +26,6 @@ def callback():
 
 def About():
     messagebox.showinfo(title='About', message='Auto Clicker \n \n Version 1.0', icon='info')
-
-
-def click():
-    w
 
 
 root = Tk()
