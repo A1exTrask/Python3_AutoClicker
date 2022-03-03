@@ -4,6 +4,7 @@ root = Tk()
 root.title('Click counter')
 root.geometry('150x130')
 root.resizable(width=False, height=False)
+root.attributes('-topmost', 1)
 
 count = 0
 
