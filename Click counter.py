@@ -1,6 +1,9 @@
 from tkinter import *
 
 root = Tk()
+x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2
+y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
+root.wm_geometry("+%d+%d" % (x, y))
 root.title('Click counter')
 root.geometry('150x130')
 root.resizable(width=False, height=False)
@@ -18,7 +21,7 @@ def clicked():
 Click = Label(root, text='0', font='Arial 35')
 Click.pack()
 
-btn = Button(root, text='Click on me', padx='20', pady='20', command=clicked)
+btn = Button(root, text='Click on me', padx='20', pady='20', cursor="hand2", command=clicked)
 btn.pack()
 
 root.mainloop()
