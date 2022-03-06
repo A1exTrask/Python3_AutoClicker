@@ -31,31 +31,31 @@ def Options():
 
 def Repeat():
     Repeat = tk.Tk()
-    Repeat.title("Clicking options")
+    Repeat.title("Clicking repeat")
     Repeat.geometry("274x183")
 
 
 def Multiple_clicks():
     Multiple_clicks = tk.Tk()
-    Multiple_clicks.title("Clicking options")
+    Multiple_clicks.title("Record multiple clicks")
     Multiple_clicks.geometry("274x183")
 
 
 def Hotkey():
     Hotkey = tk.Tk()
-    Hotkey.title("Clicking options")
+    Hotkey.title("Hotkey Setting")
     Hotkey.geometry("274x183")
 
 
 def View():
     View = tk.Tk()
-    View.title("Clicking options")
+    View.title("View Setting")
     View.geometry("274x183")
 
 
 def Other():
     Other = tk.Tk()
-    Other.title("Clicking options")
+    Other.title("Other Setting")
     Other.geometry("274x183")
 
 
