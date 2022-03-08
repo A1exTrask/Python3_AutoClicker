@@ -24,39 +24,63 @@ def Exit():
 
 
 def Options():
-    Options = tk.Tk()
-    Options.title("Clicking options")
-    Options.geometry("274x183")
+    Options1 = tk.Tk()
+    Options1.title("Clicking options")
+    Options1.geometry("274x183")
+    Options_But1 = tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3")
+    Options_But1.place(x=56, y=134)
+    Options_But2 = tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3")
+    Options_But2.place(x=148, y=134)
 
 
 def Repeat():
-    Repeat = tk.Tk()
-    Repeat.title("Clicking repeat")
-    Repeat.geometry("274x183")
+    Repeat1 = tk.Tk()
+    Repeat1.title("Clicking repeat")
+    Repeat1.geometry("274x183")
+    Repeat_But1 = tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3")
+    Repeat_But1.place(x=56, y=134)
+    Repeat_But2 = tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3")
+    Repeat_But2.place(x=148, y=134)
 
 
 def Multiple_clicks():
-    Multiple_clicks = tk.Tk()
-    Multiple_clicks.title("Record multiple clicks")
-    Multiple_clicks.geometry("274x183")
+    Multiple_clicks1 = tk.Tk()
+    Multiple_clicks1.title("Record multiple clicks")
+    Multiple_clicks1.geometry("274x183")
+    Multiple_clicks_But1 = tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3")
+    Multiple_clicks_But1.place(x=56, y=134)
+    Multiple_clicks_But2 = tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3")
+    Multiple_clicks_But2.place(x=148, y=134)
 
 
 def Hotkey():
-    Hotkey = tk.Tk()
-    Hotkey.title("Hotkey Setting")
-    Hotkey.geometry("274x183")
+    Hotkey1 = tk.Tk()
+    Hotkey1.title("Hotkey Setting")
+    Hotkey1.geometry("274x183")
+    Hotkey_But1 = tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3")
+    Hotkey_But1.place(x=56, y=134)
+    Hotkey_But2 = tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3")
+    Hotkey_But2.place(x=148, y=134)
 
 
 def View():
-    View = tk.Tk()
-    View.title("View Setting")
-    View.geometry("274x183")
+    View1 = tk.Tk()
+    View1.title("View Setting")
+    View1.geometry("274x183")
+    View_But1 = tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3")
+    View_But1.place(x=56, y=134)
+    View_But2 = tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3")
+    View_But2.place(x=148, y=134)
 
 
 def Other():
-    Other = tk.Tk()
-    Other.title("Other Setting")
-    Other.geometry("274x183")
+    Other1 = tk.Tk()
+    Other1.title("Other Setting")
+    Other1.geometry("274x183")
+    Other_But1 = tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3")
+    Other_But1.place(x=56, y=134)
+    Other_But2 = tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3")
+    Other_But2.place(x=148, y=134)
 
 
 def callback():
