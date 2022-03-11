@@ -1,6 +1,8 @@
+from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import webbrowser
+from tkinter.ttk import Combobox
 import keyboard
 import pyautogui
 import time
@@ -27,60 +29,58 @@ def Options():
     Options1 = tk.Tk()
     Options1.title("Clicking options")
     Options1.geometry("274x183")
-    Options_But1 = tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3")
-    Options_But1.place(x=56, y=134)
-    Options_But2 = tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3")
-    Options_But2.place(x=148, y=134)
+    Combobox(Options1, values=(0, 1, 2)).place(x=10, y=60)
+    Checkbutton(Options1, text="JavaScript", onvalue=1, offvalue=0, padx=15, pady=10).grid(row=1, column=0, sticky=W)
+    tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
+    tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
 
 
 def Repeat():
     Repeat1 = tk.Tk()
     Repeat1.title("Clicking repeat")
     Repeat1.geometry("274x183")
-    Repeat_But1 = tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3")
-    Repeat_But1.place(x=56, y=134)
-    Repeat_But2 = tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3")
-    Repeat_But2.place(x=148, y=134)
+    tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
+    tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
 
 
 def Multiple_clicks():
     Multiple_clicks1 = tk.Tk()
     Multiple_clicks1.title("Record multiple clicks")
     Multiple_clicks1.geometry("274x183")
-    Multiple_clicks_But1 = tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3")
-    Multiple_clicks_But1.place(x=56, y=134)
-    Multiple_clicks_But2 = tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3")
-    Multiple_clicks_But2.place(x=148, y=134)
+    tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
+    tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
 
 
 def Hotkey():
     Hotkey1 = tk.Tk()
     Hotkey1.title("Hotkey Setting")
     Hotkey1.geometry("274x183")
-    Hotkey_But1 = tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3")
-    Hotkey_But1.place(x=56, y=134)
-    Hotkey_But2 = tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3")
-    Hotkey_But2.place(x=148, y=134)
+    tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
+    tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
 
 
 def View():
     View1 = tk.Tk()
     View1.title("View Setting")
     View1.geometry("274x183")
-    View_But1 = tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3")
-    View_But1.place(x=56, y=134)
-    View_But2 = tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3")
-    View_But2.place(x=148, y=134)
+    python_lang = IntVar()
+    python_checkbutton = Checkbutton(View1, text="Python", variable=python_lang,
+                                     onvalue=1, offvalue=0, padx=15, pady=10)
+    python_checkbutton.grid(row=0, column=0, sticky=W)
+    javascript_lang = IntVar()
+    javascript_checkbutton = Checkbutton(View1, text="JavaScript", variable=javascript_lang,
+                                         onvalue=1, offvalue=0, padx=15, pady=10)
+    javascript_checkbutton.grid(row=1, column=0, sticky=W)
+    tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
+    tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
 
 
 def Other():
     Other1 = tk.Tk()
     Other1.title("Other Setting")
     Other1.geometry("274x183")
-    Other_But1 = tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3")
-    Other_But1.place(x=56, y=134)
-    Other_But2 = tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3")
-    Other_But2.place(x=148, y=134)
+    tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
+    tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
 
 
 def callback():
@@ -136,9 +136,7 @@ main_menu.add_cascade(label="Help", menu=Help_menu)
 
 root.config(menu=main_menu)
 
-m1 = tk.Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2", command=click)
-m1.place(x=15, y=12)
-m2 = tk.Button(root, text="Help >>", padx="72", pady="5", cursor="hand2", command=callback)
-m2.place(x=15, y=60)
+tk.Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2", command=click).place(x=15, y=12)
+tk.Button(root, text="Help >>", padx="72", pady="5", cursor="hand2", command=callback).place(x=15, y=60)
 
 root.mainloop()
