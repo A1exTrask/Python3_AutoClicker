@@ -22,7 +22,7 @@ def click():
 
 
 def Exit():
-    root.destroy()  # Закрытие
+    root.quit()  # Закрытие
 
 
 def Options():
@@ -30,9 +30,9 @@ def Options():
     Options1.title("Clicking options")
     Options1.geometry("274x183")
     Combobox(Options1, values=(0, 1, 2)).place(x=10, y=60)
-    Checkbutton(Options1, text="JavaScript", onvalue=1, offvalue=0, padx=15, pady=10).grid(row=1, column=0, sticky=W)
+    Checkbutton(Options1, text="Freeze the pointer (only single clik)", onvalue=1, offvalue=0, padx=15, pady=10).place(x=1, y=83)
     tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
+    tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3", command=Options1.destroy).place(x=148, y=134)
 
 
 def Repeat():
@@ -40,7 +40,7 @@ def Repeat():
     Repeat1.title("Clicking repeat")
     Repeat1.geometry("274x183")
     tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
+    tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3", command=Repeat1.destroy).place(x=148, y=134)
 
 
 def Multiple_clicks():
@@ -48,7 +48,7 @@ def Multiple_clicks():
     Multiple_clicks1.title("Record multiple clicks")
     Multiple_clicks1.geometry("274x183")
     tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
+    tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3", command=Multiple_clicks1.destroy).place(x=148, y=134)
 
 
 def Hotkey():
@@ -56,7 +56,7 @@ def Hotkey():
     Hotkey1.title("Hotkey Setting")
     Hotkey1.geometry("274x183")
     tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
+    tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3", command=Hotkey1.destroy).place(x=148, y=134)
 
 
 def View():
@@ -72,7 +72,7 @@ def View():
                                          onvalue=1, offvalue=0, padx=15, pady=10)
     javascript_checkbutton.grid(row=1, column=0, sticky=W)
     tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
+    tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3", command=View.destroy).place(x=148, y=134)
 
 
 def Other():
@@ -80,7 +80,7 @@ def Other():
     Other1.title("Other Setting")
     Other1.geometry("274x183")
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3").place(x=148, y=134)
+    tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other.destroy).place(x=148, y=134)
 
 
 def callback():
