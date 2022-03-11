@@ -72,7 +72,7 @@ def View():
                                          onvalue=1, offvalue=0, padx=15, pady=10)
     javascript_checkbutton.grid(row=1, column=0, sticky=W)
     tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3", command=View.destroy).place(x=148, y=134)
+    tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3", command=View1.destroy).place(x=148, y=134)
 
 
 def Other():
@@ -80,7 +80,7 @@ def Other():
     Other1.title("Other Setting")
     Other1.geometry("274x183")
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other.destroy).place(x=148, y=134)
+    tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=134)
 
 
 def callback():
