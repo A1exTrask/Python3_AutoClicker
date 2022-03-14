@@ -21,7 +21,7 @@ def click():
             pyautogui.moveTo(maxX / 2, maxY / 2)
 
 
-def close_event_disable():
+def disable_x():
     pass
 
 
@@ -30,7 +30,7 @@ def Options():
     Options1.title("Clicking options")
     Options1.geometry("274x183")
     Options1.resizable(False, False)
-    Options1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    Options1.protocol("WM_DELETE_WINDOW", disable_x)
     Label(Options1, text='Mouse:', font='Times 10').place(x=11, y=14)
     Combobox(Options1, values=('Left', 'Right', 'Middle')).place(x=63, y=14)
     Label(Options1, text='Click:', font='Times 10').place(x=11, y=53)
@@ -45,7 +45,7 @@ def Repeat():
     Repeat1.title("Clicking repeat")
     Repeat1.geometry("400x190")
     Repeat1.resizable(False, False)
-    Repeat1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    Repeat1.protocol("WM_DELETE_WINDOW", disable_x)
     Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
     Label(Repeat1, text='hours', font='Times 10').place(x=200, y=110)
     Label(Repeat1, text='mins', font='Times 10').place(x=250, y=110)
@@ -60,7 +60,7 @@ def Multiple_clicks():
     Multiple_clicks1.title("Record multiple clicks")
     Multiple_clicks1.geometry("274x183")
     Multiple_clicks1.resizable(False, False)
-    Multiple_clicks1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    Multiple_clicks1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3", command=Multiple_clicks1.destroy).place(x=148, y=134)
 
@@ -70,7 +70,7 @@ def Hotkey():
     Hotkey1.title("Hotkey Setting")
     Hotkey1.geometry("274x183")
     Hotkey1.resizable(False, False)
-    Hotkey1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    Hotkey1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3", command=Hotkey1.destroy).place(x=148, y=134)
 
@@ -80,7 +80,7 @@ def View():
     View1.title("View Setting")
     View1.geometry("274x183")
     View1.resizable(False, False)
-    View1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    View1.protocol("WM_DELETE_WINDOW", disable_x)
     python_lang = IntVar()
     python_checkbutton = Checkbutton(View1, text="Python", variable=python_lang,
                                      onvalue=1, offvalue=0, padx=15, pady=10)
