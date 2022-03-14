@@ -21,48 +21,66 @@ def click():
             pyautogui.moveTo(maxX / 2, maxY / 2)
 
 
-def Exit():
-    root.quit()  # Закрытие
+def close_event_disable():
+    pass
 
 
 def Options():
-    Options1 = tk.Tk()
+    Options1 = Toplevel()
     Options1.title("Clicking options")
     Options1.geometry("274x183")
-    Combobox(Options1, values=(0, 1, 2)).place(x=10, y=60)
-    Checkbutton(Options1, text="Freeze the pointer (only single clik)", onvalue=1, offvalue=0, padx=15, pady=10).place(x=1, y=83)
+    Options1.resizable(False, False)
+    Options1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    Label(Options1, text='Mouse:', font='Times 10').place(x=11, y=14)
+    Combobox(Options1, values=('Left', 'Right', 'Middle')).place(x=63, y=14)
+    Label(Options1, text='Click:', font='Times 10').place(x=11, y=53)
+    Combobox(Options1, values=('Single', 'Double')).place(x=63, y=53)
+    Checkbutton(Options1, text="Freeze the pointer (only single clik)", onvalue=1, offvalue=0).place(x=10, y=92)
     tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3", command=Options1.destroy).place(x=148, y=134)
 
 
 def Repeat():
-    Repeat1 = tk.Tk()
+    Repeat1 = Toplevel()
     Repeat1.title("Clicking repeat")
-    Repeat1.geometry("274x183")
+    Repeat1.geometry("400x190")
+    Repeat1.resizable(False, False)
+    Repeat1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=53)
+    Label(Repeat1, text='hours', font='Times 10').place(x=21, y=53)
+    Label(Repeat1, text='mins', font='Times 10').place(x=31, y=53)
+    Label(Repeat1, text='secs:', font='Times 10').place(x=41, y=53)
+    Label(Repeat1, text='milliseconds', font='Times 10').place(x=51, y=53)
     tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3", command=Repeat1.destroy).place(x=148, y=134)
 
 
 def Multiple_clicks():
-    Multiple_clicks1 = tk.Tk()
+    Multiple_clicks1 = Toplevel()
     Multiple_clicks1.title("Record multiple clicks")
     Multiple_clicks1.geometry("274x183")
+    Multiple_clicks1.resizable(False, False)
+    Multiple_clicks1.protocol("WM_DELETE_WINDOW", close_event_disable)
     tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3", command=Multiple_clicks1.destroy).place(x=148, y=134)
 
 
 def Hotkey():
-    Hotkey1 = tk.Tk()
+    Hotkey1 = Toplevel()
     Hotkey1.title("Hotkey Setting")
     Hotkey1.geometry("274x183")
+    Hotkey1.resizable(False, False)
+    Hotkey1.protocol("WM_DELETE_WINDOW", close_event_disable)
     tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3", command=Hotkey1.destroy).place(x=148, y=134)
 
 
 def View():
-    View1 = tk.Tk()
+    View1 = Toplevel()
     View1.title("View Setting")
     View1.geometry("274x183")
+    View1.resizable(False, False)
+    View1.protocol("WM_DELETE_WINDOW", close_event_disable)
     python_lang = IntVar()
     python_checkbutton = Checkbutton(View1, text="Python", variable=python_lang,
                                      onvalue=1, offvalue=0, padx=15, pady=10)
@@ -76,9 +94,11 @@ def View():
 
 
 def Other():
-    Other1 = tk.Tk()
+    Other1 = Toplevel()
     Other1.title("Other Setting")
     Other1.geometry("274x183")
+    Other1.resizable(False, False)
+    Other1.protocol("WM_DELETE_WINDOW", close_event_disable)
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=134)
 
@@ -97,13 +117,13 @@ y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
 root.wm_geometry("+%d+%d" % (x, y))
 root.geometry('230x110')
 root.title('Auto Clicker')
-root.resizable(width=False, height=False)
+root.resizable(False, False)
 root.attributes('-topmost', 1)
 
 main_menu = tk.Menu()
 
 file_menu = tk.Menu(tearoff=0)
-file_menu.add_command(label="Exit", command=Exit)
+file_menu.add_command(label="Exit", command=root.quit)
 
 Options_menu = tk.Menu(tearoff=0)
 
