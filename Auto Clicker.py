@@ -46,13 +46,13 @@ def Repeat():
     Repeat1.geometry("400x190")
     Repeat1.resizable(False, False)
     Repeat1.protocol("WM_DELETE_WINDOW", close_event_disable)
-    Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=53)
-    Label(Repeat1, text='hours', font='Times 10').place(x=21, y=53)
-    Label(Repeat1, text='mins', font='Times 10').place(x=31, y=53)
-    Label(Repeat1, text='secs:', font='Times 10').place(x=41, y=53)
-    Label(Repeat1, text='milliseconds', font='Times 10').place(x=51, y=53)
-    tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3", command=Repeat1.destroy).place(x=148, y=134)
+    Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
+    Label(Repeat1, text='hours', font='Times 10').place(x=200, y=110)
+    Label(Repeat1, text='mins', font='Times 10').place(x=250, y=110)
+    Label(Repeat1, text='secs', font='Times 10').place(x=300, y=110)
+    Label(Repeat1, text='milliseconds', font='Times 10').place(x=333, y=110)
+    tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=121, y=147)
+    tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3", command=Repeat1.destroy).place(x=210, y=147)
 
 
 def Multiple_clicks():
