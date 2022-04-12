@@ -46,9 +46,13 @@ def Repeat():
     Repeat1.geometry("400x190")
     Repeat1.resizable(False, False)
     Repeat1.protocol("WM_DELETE_WINDOW", disable_x)
+    frame = LabelFrame(Repeat1, padx="125", pady="15")
+    frame.place(x=5, y=6)
+    Radiobutton(frame, text="Repeat", value=0).grid(row=0, column=0, sticky=W)  # переделать
+    Radiobutton(frame, text="Repeat until stopped", value=1).grid(row=1, column=0, sticky=W)  # переделать
     Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
     Label(Repeat1, text='hours', font='Times 10').place(x=200, y=110)
-    Label(Repeat1, text='mins', font='Times 10').place(x=250, y=110)
+    Label(Repeat1, text='mis', font='Times 10').place(x=250, y=110)
     Label(Repeat1, text='secs', font='Times 10').place(x=300, y=110)
     Label(Repeat1, text='milliseconds', font='Times 10').place(x=333, y=110)
     tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=121, y=147)
@@ -98,7 +102,7 @@ def Other():
     Other1.title("Other Setting")
     Other1.geometry("274x183")
     Other1.resizable(False, False)
-    Other1.protocol("WM_DELETE_WINDOW", close_event_disable)
+    Other1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=134)
 
