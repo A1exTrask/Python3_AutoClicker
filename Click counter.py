@@ -5,7 +5,7 @@ x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2
 y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
 root.wm_geometry("+%d+%d" % (x, y))
 root.title('Click counter')
-root.geometry('150x130')
+root.geometry('180x130')
 root.resizable(width=False, height=False)
 root.attributes('-topmost', 1)
 

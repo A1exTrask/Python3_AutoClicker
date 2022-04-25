@@ -5,20 +5,26 @@ import webbrowser
 from tkinter.ttk import Combobox
 import keyboard
 import pyautogui
-import time
-
-stopKey = "f8"
-maxX, maxY = pyautogui.size()
 
 
-def click():
-    while True:
-        if keyboard.is_pressed(stopKey):
-            break
-        else:
-            pyautogui.click(button='left')
-            time.sleep(0.1)
-            pyautogui.moveTo(maxX / 2, maxY / 2)
+isRun = [False]
+
+
+def callback():
+    if isRun[0]:
+        isRun[0] = False
+        print("off")
+    else:
+        isRun[0] = True
+        print("on")
+    tick()
+
+
+def tick():
+    if not isRun[0]:
+        return
+    pyautogui.click(button='left')
+    root.after(1000, tick)
 
 
 def disable_x():
@@ -107,7 +113,7 @@ def Other():
     tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=134)
 
 
-def callback():
+def link():
     webbrowser.open_new(r"https://github.com/A1exTrask/Python3_AutoClicker")
 
 
@@ -151,7 +157,7 @@ Options_menu.add_cascade(label="Recording", menu=Recording_menu)
 Options_menu.add_cascade(label="Settings", menu=Settings_menu)
 
 Help_menu = tk.Menu(tearoff=0)
-Help_menu.add_command(label="How to automate a sequence of mouse clicks and keystrokes", command=callback)
+Help_menu.add_command(label="How to automate a sequence of mouse clicks and keystrokes", command=link)
 Help_menu.add_command(label="About", command=About)
 
 main_menu.add_cascade(label="File", menu=file_menu)
@@ -160,7 +166,8 @@ main_menu.add_cascade(label="Help", menu=Help_menu)
 
 root.config(menu=main_menu)
 
-tk.Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2", command=click).place(x=15, y=12)
-tk.Button(root, text="Help >>", padx="72", pady="5", cursor="hand2", command=callback).place(x=15, y=60)
+keyboard.add_hotkey("f8", callback)
+tk.Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2", command=callback).place(x=15, y=12)
+tk.Button(root, text="Help >>", padx="72", pady="5", cursor="hand2", command=link).place(x=15, y=60)
 
 root.mainloop()
