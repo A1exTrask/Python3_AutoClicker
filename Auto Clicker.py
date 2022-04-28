@@ -92,11 +92,11 @@ def View():
     View1.resizable(False, False)
     View1.protocol("WM_DELETE_WINDOW", disable_x)
     python_lang = IntVar()
-    python_checkbutton = Checkbutton(View1, text="Python", variable=python_lang,
+    python_checkbutton = Checkbutton(View1, text="text", variable=python_lang,
                                      onvalue=1, offvalue=0, padx=15, pady=10)
     python_checkbutton.grid(row=0, column=0, sticky=W)
     javascript_lang = IntVar()
-    javascript_checkbutton = Checkbutton(View1, text="JavaScript", variable=javascript_lang,
+    javascript_checkbutton = Checkbutton(View1, text="text", variable=javascript_lang,
                                          onvalue=1, offvalue=0, padx=15, pady=10)
     javascript_checkbutton.grid(row=1, column=0, sticky=W)
     tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
