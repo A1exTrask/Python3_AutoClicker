@@ -1,10 +1,11 @@
-from tkinter import *
 import tkinter as tk
 import webbrowser
+from tkinter import *
 from tkinter.ttk import Combobox
+from tkinter.ttk import Radiobutton
+
 import keyboard
 import pyautogui
-
 
 isRun = [False]
 
@@ -37,9 +38,9 @@ def Options():
     Options1.resizable(False, False)
     Options1.protocol("WM_DELETE_WINDOW", disable_x)
     Label(Options1, text='Mouse:', font='Times 10').place(x=11, y=14)
-    Combobox(Options1, values=('Left', 'Right', 'Middle')).place(x=63, y=14)
+    Combobox(Options1, values=('Left', 'Right', 'Middle'), width=8).place(x=63, y=14)
     Label(Options1, text='Click:', font='Times 10').place(x=11, y=53)
-    Combobox(Options1, values=('Single', 'Double')).place(x=63, y=53)
+    Combobox(Options1, values=('Single', 'Double'), width=8).place(x=63, y=53)
     Checkbutton(Options1, text="Freeze the pointer (only single clik)", onvalue=1, offvalue=0).place(x=10, y=92)
     tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3", command=Options1.destroy).place(x=148, y=134)
@@ -53,8 +54,8 @@ def Repeat():
     Repeat1.protocol("WM_DELETE_WINDOW", disable_x)
     frame = LabelFrame(Repeat1, padx="125", pady="15")
     frame.place(x=5, y=6)
-    Radiobutton(frame, text="Repeat", value=0).grid(row=0, column=0, sticky=W)  # переделать
-    Radiobutton(frame, text="Repeat until stopped", value=1).grid(row=1, column=0, sticky=W)  # переделать
+    Radiobutton(frame, text="Repeat", value=1).grid(row=0, column=0, sticky=W)  # переделать
+    Radiobutton(frame, text="Repeat until stopped", value=2).grid(row=1, column=0, sticky=W)  # переделать
     Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
     Label(Repeat1, text='hours', font='Times 10').place(x=200, y=110)
     Label(Repeat1, text='mis', font='Times 10').place(x=250, y=110)
