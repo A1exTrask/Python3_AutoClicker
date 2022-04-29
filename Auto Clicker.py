@@ -55,8 +55,8 @@ def Repeat():
     Repeat1.protocol("WM_DELETE_WINDOW", disable_x)
     frame = LabelFrame(Repeat1, padx="127", pady="19")
     frame.place(x=5, y=6)
-    Radiobutton(frame, text="Repeat", value=1).grid(row=0, column=0, sticky=W)  # переделать
-    Radiobutton(frame, text="Repeat until stopped", value=2).grid(row=1, column=0, sticky=W)  # переделать
+    Radiobutton(frame, text="Repeat", value=1).grid(row=0, column=0, sticky=W)  # переделать находится в центре
+    Radiobutton(frame, text="Repeat until stopped", value=2).grid(row=1, column=0, sticky=W)  # переделать находится в центре
     Spinbox(frame, width=7, from_=1, to=16959).place(x=70, y=3)
     Label(frame, text='times', font='Times 10').place(x=130, y=3)
     Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
