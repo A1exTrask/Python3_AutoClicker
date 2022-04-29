@@ -1,6 +1,7 @@
 import tkinter as tk
 import webbrowser
 from tkinter import *
+from tkinter import messagebox
 from tkinter.ttk import Combobox
 from tkinter.ttk import Radiobutton
 
@@ -118,12 +119,7 @@ def link():
 
 
 def About():
-    About1 = Toplevel()
-    About1.title("About")
-    About1.geometry("198x130")
-    About1.resizable(False, False)
-    tk.Button(About1, text='OK', font="Times 7", padx="26", pady="1", command=About1.destroy).place(x=108, y=96)
-    # (title='About', message='Auto Clicker \n \n Version 1.0')
+    messagebox.showinfo(title='About', message='Auto Clicker \n \n Version 1.0', icon='info')
 
 
 root = tk.Tk()
