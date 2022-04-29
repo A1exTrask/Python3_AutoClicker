@@ -58,10 +58,14 @@ def Repeat():
     Radiobutton(frame, text="Repeat", value=1).grid(row=0, column=0, sticky=W)  # переделать
     Radiobutton(frame, text="Repeat until stopped", value=2).grid(row=1, column=0, sticky=W)  # переделать
     Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
-    Label(Repeat1, text='hours', font='Times 10').place(x=200, y=110)
-    Label(Repeat1, text='mis', font='Times 10').place(x=250, y=110)
-    Label(Repeat1, text='secs', font='Times 10').place(x=300, y=110)
-    Label(Repeat1, text='milliseconds', font='Times 10').place(x=333, y=110)
+    Label(Repeat1, text='hours', font='Times 10').place(x=121, y=110)
+    Label(Repeat1, text='mins', font='Times 10').place(x=190, y=110)
+    Label(Repeat1, text='secs', font='Times 10').place(x=252, y=110)
+    Label(Repeat1, text='milliseconds', font='Times 10').place(x=315, y=110)
+    tk.Entry(Repeat1, width=4).place(x=93, y=110)
+    tk.Entry(Repeat1, width=4).place(x=161, y=110)
+    tk.Entry(Repeat1, width=4).place(x=225, y=110)
+    tk.Entry(Repeat1, width=4).place(x=287, y=110)
     tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=121, y=147)
     tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3", command=Repeat1.destroy).place(x=210, y=147)
 
