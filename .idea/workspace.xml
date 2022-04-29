@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="editing">
+    <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="interval">
       <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto Clicker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto Clicker.py" afterDir="false" />
@@ -284,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651222280327</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="interval">
+      <created>1651225702267</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1651225702267</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +308,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1main" />
     <MESSAGE value="editing" />
-    <option name="LAST_COMMIT_MESSAGE" value="editing" />
+    <MESSAGE value="interval" />
+    <option name="LAST_COMMIT_MESSAGE" value="interval" />
   </component>
 </project>
