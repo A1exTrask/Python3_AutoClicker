@@ -75,7 +75,7 @@ def Repeat():
 def Multiple_clicks():
     Multiple_clicks1 = Toplevel()
     Multiple_clicks1.title("Record multiple clicks")
-    Multiple_clicks1.geometry("274x183")
+    Multiple_clicks1.geometry("284x175")
     Multiple_clicks1.resizable(False, False)
     Multiple_clicks1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
