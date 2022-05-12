@@ -36,6 +36,7 @@ def Options():
     Options1 = Toplevel()
     Options1.title("Clicking options")
     Options1.geometry("274x183")
+    Options1.grab_set()
     Options1.resizable(False, False)
     Options1.protocol("WM_DELETE_WINDOW", disable_x)
     Label(Options1, text='Mouse:', font='Times 10').place(x=11, y=14)
@@ -51,6 +52,7 @@ def Repeat():
     Repeat1 = Toplevel()
     Repeat1.title("Clicking repeat")
     Repeat1.geometry("400x190")
+    Repeat1.grab_set()
     Repeat1.resizable(False, False)
     Repeat1.protocol("WM_DELETE_WINDOW", disable_x)
     frame = LabelFrame(Repeat1, padx="127", pady="19")
@@ -76,16 +78,23 @@ def Multiple_clicks():
     Multiple_clicks1 = Toplevel()
     Multiple_clicks1.title("Record multiple clicks")
     Multiple_clicks1.geometry("284x175")
+    Multiple_clicks1.grab_set()
     Multiple_clicks1.resizable(False, False)
     Multiple_clicks1.protocol("WM_DELETE_WINDOW", disable_x)
-    tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3", command=Multiple_clicks1.destroy).place(x=148, y=134)
+    Checkbutton(Multiple_clicks1, text="Record and replay multiple clicks", onvalue=1, offvalue=0).place(x=10, y=12)
+    Label(Multiple_clicks1, text='Click records:').place(x=10, y=45)
+    tk.Entry(Multiple_clicks1, width=12).place(x=110, y=45)
+    tk.Button(Multiple_clicks1, text='Pick point', padx="12", pady="15").place(x=192, y=50)
+    tk.Button(Multiple_clicks1, text='Clear', padx="20", pady="1").place(x=110, y=78)
+    tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)  # поправить
+    tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3", command=Multiple_clicks1.destroy).place(x=148, y=134)  # поправить
 
 
 def Hotkey():
     Hotkey1 = Toplevel()
     Hotkey1.title("Hotkey Setting")
     Hotkey1.geometry("274x183")
+    Hotkey1.grab_set()
     Hotkey1.resizable(False, False)
     Hotkey1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
@@ -96,6 +105,7 @@ def View():
     View1 = Toplevel()
     View1.title("View Setting")
     View1.geometry("274x183")
+    View1.grab_set()
     View1.resizable(False, False)
     View1.protocol("WM_DELETE_WINDOW", disable_x)
     python_lang = IntVar()
@@ -114,6 +124,7 @@ def Other():
     Other1 = Toplevel()
     Other1.title("Other Setting")
     Other1.geometry("274x183")
+    Other1.grab_set()
     Other1.resizable(False, False)
     Other1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
@@ -173,7 +184,7 @@ main_menu.add_cascade(label="Help", menu=Help_menu)
 
 root.config(menu=main_menu)
 
-keyboard.add_hotkey("f8", callback)
+keyboard.add_hotkey("f8", callback)  # кнопка
 tk.Button(root, text='Press F8 to click', padx="53", pady="5", cursor="hand2", command=callback).place(x=15, y=12)
 tk.Button(root, text="Help >>", padx="72", pady="5", cursor="hand2", command=link).place(x=15, y=60)
 
