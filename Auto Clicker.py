@@ -86,8 +86,8 @@ def Multiple_clicks():
     tk.Entry(Multiple_clicks1, width=12).place(x=110, y=45)
     tk.Button(Multiple_clicks1, text='Pick point', padx="12", pady="15").place(x=192, y=50)
     tk.Button(Multiple_clicks1, text='Clear', padx="20", pady="1").place(x=110, y=78)
-    tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)  # поправить
-    tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3", command=Multiple_clicks1.destroy).place(x=148, y=134)  # поправить
+    tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=60, y=128)
+    tk.Button(Multiple_clicks1, text='Cancel', font="Times 10", padx="7", pady="3", command=Multiple_clicks1.destroy).place(x=163, y=128)
 
 
 def Hotkey():
