@@ -93,12 +93,14 @@ def Multiple_clicks():
 def Hotkey():
     Hotkey1 = Toplevel()
     Hotkey1.title("Hotkey Setting")
-    Hotkey1.geometry("274x183")
+    Hotkey1.geometry('230x110')
     Hotkey1.grab_set()
     Hotkey1.resizable(False, False)
     Hotkey1.protocol("WM_DELETE_WINDOW", disable_x)
-    tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3", command=Hotkey1.destroy).place(x=148, y=134)
+    tk.Button(Hotkey1, text='Click/Stop', font="Times 10", padx="18", pady="3").place(x=11, y=18)
+    tk.Button(Hotkey1, text='F8', font="Times 10", padx="39", pady="3").place(x=120, y=18)  # переделать текст
+    tk.Button(Hotkey1, text='Ok', font="Times 10", padx="17", pady="3").place(x=40, y=65)
+    tk.Button(Hotkey1, text='Cancel', font="Times 10", padx="7", pady="3", command=Hotkey1.destroy).place(x=130, y=65)
 
 
 def View():
