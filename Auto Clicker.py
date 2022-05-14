@@ -106,20 +106,14 @@ def Hotkey():
 def View():
     View1 = Toplevel()
     View1.title("View Setting")
-    View1.geometry("274x183")
+    View1.geometry("280x145")
     View1.grab_set()
     View1.resizable(False, False)
     View1.protocol("WM_DELETE_WINDOW", disable_x)
-    python_lang = IntVar()
-    python_checkbutton = Checkbutton(View1, text="text", variable=python_lang,
-                                     onvalue=1, offvalue=0, padx=15, pady=10)
-    python_checkbutton.grid(row=0, column=0, sticky=W)
-    javascript_lang = IntVar()
-    javascript_checkbutton = Checkbutton(View1, text="text", variable=javascript_lang,
-                                         onvalue=1, offvalue=0, padx=15, pady=10)
-    javascript_checkbutton.grid(row=1, column=0, sticky=W)
-    tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3", command=View1.destroy).place(x=148, y=134)
+    Checkbutton(View1, text="Hide when it is clicking", onvalue=1, offvalue=0).place(x=10, y=10)  # переделать
+    Checkbutton(View1, text="Show when it finish clik", onvalue=1, offvalue=0).place(x=10, y=80)  # переделать
+    tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)  # переделать
+    tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3", command=View1.destroy).place(x=148, y=134)  # переделать
 
 
 def Other():
