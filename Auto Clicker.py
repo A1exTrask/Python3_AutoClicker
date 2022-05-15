@@ -126,6 +126,8 @@ def Other():
     Other1.grab_set()
     Other1.resizable(False, False)
     Other1.protocol("WM_DELETE_WINDOW", disable_x)
+    #  Добавить LabelFrame и Spinbox
+    #  Spinbox(frame, width=7, from_=1, to=16959).place(x=70, y=3)
     Checkbutton(Other1, text="Display balloon tip", onvalue=1, offvalue=0).place(x=10, y=80)  # переделать
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=130)  # переделать
     tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=130)  # переделать
