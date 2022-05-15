@@ -7,6 +7,7 @@ from tkinter.ttk import Radiobutton
 
 import keyboard
 import pyautogui
+#  /////////////////////////////////////////////
 
 isRun = [False]
 
@@ -26,6 +27,8 @@ def tick():
         return
     pyautogui.click(button='left')
     root.after(1000, tick)
+
+#  /////////////////////////////////////////////
 
 
 def disable_x():
@@ -119,12 +122,13 @@ def View():
 def Other():
     Other1 = Toplevel()
     Other1.title("Other Setting")
-    Other1.geometry("274x183")
+    Other1.geometry("252x170")
     Other1.grab_set()
     Other1.resizable(False, False)
     Other1.protocol("WM_DELETE_WINDOW", disable_x)
-    tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
-    tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=134)
+    Checkbutton(Other1, text="Display balloon tip", onvalue=1, offvalue=0).place(x=10, y=80)  # переделать
+    tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=130)  # переделать
+    tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=130)  # переделать
 
 
 def link():
