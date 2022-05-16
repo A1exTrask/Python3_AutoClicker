@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="View">
+    <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="Other">
       <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto Clicker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto Clicker.py" afterDir="false" />
@@ -350,7 +350,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652562674099</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Other">
+      <created>1652629061067</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1652629061067</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Other">
+      <created>1652629279287</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1652629279287</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -382,6 +396,7 @@
     <MESSAGE value="Repeat" />
     <MESSAGE value="Multiple clicks" />
     <MESSAGE value="View" />
-    <option name="LAST_COMMIT_MESSAGE" value="View" />
+    <MESSAGE value="Other" />
+    <option name="LAST_COMMIT_MESSAGE" value="Other" />
   </component>
 </project>
