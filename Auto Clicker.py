@@ -7,9 +7,11 @@ from tkinter.ttk import Radiobutton
 
 import keyboard
 import pyautogui
+
 #  /////////////////////////////////////////////
 
 isRun = [False]
+time_interval = 1000
 
 
 def callback():
@@ -26,7 +28,7 @@ def tick():
     if not isRun[0]:
         return
     pyautogui.click(button='left')
-    root.after(1000, tick)
+    root.after(time_interval, tick)
 
 #  /////////////////////////////////////////////
 
@@ -71,10 +73,10 @@ def Repeat():
     Label(Repeat1, text='mins', font='Times 10').place(x=190, y=110)
     Label(Repeat1, text='secs', font='Times 10').place(x=252, y=110)
     Label(Repeat1, text='milliseconds', font='Times 10').place(x=315, y=110)
-    tk.Entry(Repeat1, width=4).place(x=93, y=110)
-    tk.Entry(Repeat1, width=4).place(x=161, y=110)
-    tk.Entry(Repeat1, width=4).place(x=225, y=110)
-    tk.Entry(Repeat1, width=4).place(x=287, y=110)
+    tk.Entry(Repeat1, justify=tk.RIGHT, width=4).place(x=93, y=110)
+    tk.Entry(Repeat1, justify=tk.RIGHT, width=4).place(x=161, y=110)
+    tk.Entry(Repeat1, justify=tk.RIGHT, width=4).place(x=225, y=110)
+    tk.Entry(Repeat1, justify=tk.RIGHT, width=4).place(x=287, y=110)
     tk.Button(Repeat1, text='Ok', font="Times 10", padx="17", pady="3").place(x=121, y=147)
     tk.Button(Repeat1, text='Cancel', font="Times 10", padx="7", pady="3", command=Repeat1.destroy).place(x=210, y=147)
 
@@ -89,7 +91,7 @@ def Multiple_clicks():
     Multiple_clicks1.protocol("WM_DELETE_WINDOW", disable_x)
     Checkbutton(Multiple_clicks1, text="Record and replay multiple clicks", onvalue=1, offvalue=0).place(x=10, y=12)
     Label(Multiple_clicks1, text='Click records:').place(x=10, y=45)
-    tk.Entry(Multiple_clicks1, width=12).place(x=110, y=45)
+    tk.Entry(Multiple_clicks1, justify=tk.RIGHT, width=12).place(x=110, y=45)
     tk.Button(Multiple_clicks1, text='Pick point', padx="12", pady="15").place(x=192, y=50)
     tk.Button(Multiple_clicks1, text='Clear', padx="20", pady="1").place(x=110, y=78)
     tk.Button(Multiple_clicks1, text='Ok', font="Times 10", padx="17", pady="3").place(x=60, y=128)
