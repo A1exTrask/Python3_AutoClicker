@@ -41,6 +41,7 @@ def Options():
     Options1.geometry("274x183")
     Options1.grab_set()
     Options1.resizable(False, False)
+    Options1.attributes('-topmost', 1)
     Options1.protocol("WM_DELETE_WINDOW", disable_x)
     Label(Options1, text='Mouse:', font='Times 10').place(x=11, y=14)
     Combobox(Options1, values=('Left', 'Right', 'Middle'), width=8).place(x=63, y=14)
@@ -57,6 +58,7 @@ def Repeat():
     Repeat1.geometry("400x190")
     Repeat1.grab_set()
     Repeat1.resizable(False, False)
+    Repeat1.attributes('-topmost', 1)
     Repeat1.protocol("WM_DELETE_WINDOW", disable_x)
     frame = LabelFrame(Repeat1, padx="127", pady="19")
     frame.place(x=5, y=6)
@@ -83,6 +85,7 @@ def Multiple_clicks():
     Multiple_clicks1.geometry("284x175")
     Multiple_clicks1.grab_set()
     Multiple_clicks1.resizable(False, False)
+    Multiple_clicks1.attributes('-topmost', 1)
     Multiple_clicks1.protocol("WM_DELETE_WINDOW", disable_x)
     Checkbutton(Multiple_clicks1, text="Record and replay multiple clicks", onvalue=1, offvalue=0).place(x=10, y=12)
     Label(Multiple_clicks1, text='Click records:').place(x=10, y=45)
@@ -99,6 +102,7 @@ def Hotkey():
     Hotkey1.geometry('230x110')
     Hotkey1.grab_set()
     Hotkey1.resizable(False, False)
+    Hotkey1.attributes('-topmost', 1)
     Hotkey1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Button(Hotkey1, text='Click/Stop', font="Times 10", padx="18", pady="3").place(x=11, y=18)
     tk.Button(Hotkey1, text='F8', font="Times 10", padx="39", pady="3").place(x=120, y=18)  # переделать текст
@@ -112,6 +116,7 @@ def View():
     View1.geometry("280x145")
     View1.grab_set()
     View1.resizable(False, False)
+    View1.attributes('-topmost', 1)
     View1.protocol("WM_DELETE_WINDOW", disable_x)
     Checkbutton(View1, text="Hide when it is clicking", onvalue=1, offvalue=0).place(x=10, y=10)  # переделать
     Checkbutton(View1, text="Show when it finish clik", onvalue=1, offvalue=0).place(x=10, y=80)  # переделать
@@ -125,6 +130,7 @@ def Other():
     Other1.geometry("252x170")
     Other1.grab_set()
     Other1.resizable(False, False)
+    Other1.attributes('-topmost', 1)
     Other1.protocol("WM_DELETE_WINDOW", disable_x)
     frame = LabelFrame(Other1, text='On click complete', padx="80", pady="19")   # переделать
     frame.place(x=5, y=6)                                     # переделать
