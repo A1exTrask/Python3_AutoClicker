@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="Other">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto Clicker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto Clicker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.Clicker">
+  <component name="RunManager" selected="Python.Auto Clicker">
     <configuration name="Auto Clicker" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Python3_AutoClicker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -409,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655067449258</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Other">
+      <created>1655081585637</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1655081585637</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

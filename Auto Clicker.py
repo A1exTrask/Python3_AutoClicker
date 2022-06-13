@@ -1,7 +1,6 @@
 import tkinter as tk
 import webbrowser
-from tkinter import *
-from tkinter import messagebox
+from tkinter import messagebox, W
 from tkinter.ttk import Combobox
 from tkinter.ttk import Radiobutton
 
@@ -38,7 +37,7 @@ def disable_x():
 
 
 def Options():
-    Options1 = Toplevel()
+    Options1 = tk.Toplevel()
     Options1.title("Clicking options")
     Options1.geometry("274x183")
     Options1.grab_set()
@@ -49,24 +48,24 @@ def Options():
     Combobox(Options1, values=('Left', 'Right', 'Middle'), width=8).place(x=63, y=14)
     tk.Label(Options1, text='Click:', font='Times 10').place(x=11, y=53)
     Combobox(Options1, values=('Single', 'Double'), width=8).place(x=63, y=53)
-    Checkbutton(Options1, text="Freeze the pointer (only single clik)", onvalue=1, offvalue=0).place(x=10, y=92)
+    tk.Checkbutton(Options1, text="Freeze the pointer (only single clik)", onvalue=1, offvalue=0).place(x=10, y=92)
     tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3", command=Options1.destroy).place(x=148, y=134)
 
 
 def Repeat():
-    Repeat1 = Toplevel()
+    Repeat1 = tk.Toplevel()
     Repeat1.title("Clicking repeat")
     Repeat1.geometry("400x190")
     Repeat1.grab_set()
     Repeat1.resizable(False, False)
     Repeat1.attributes('-topmost', 1)
     Repeat1.protocol("WM_DELETE_WINDOW", disable_x)
-    frame = LabelFrame(Repeat1, padx="127", pady="19")
+    frame = tk.LabelFrame(Repeat1, padx="127", pady="19")
     frame.place(x=5, y=6)
     Radiobutton(frame, text="Repeat", value=1).grid(row=0, column=0, sticky=W)  # переделать находится в центре
     Radiobutton(frame, text="Repeat until stopped", value=2).grid(row=1, column=0, sticky=W)  # переделать находится в центре
-    Spinbox(frame, width=7, from_=1, to=16959).place(x=70, y=3)
+    tk.Spinbox(frame, width=7, from_=1, to=16959).place(x=70, y=3)
     tk.Label(frame, text='times', font='Times 10').place(x=130, y=3)
     tk.Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
     tk.Label(Repeat1, text='hours', font='Times 10').place(x=121, y=110)
@@ -82,14 +81,14 @@ def Repeat():
 
 
 def Multiple_clicks():
-    Multiple_clicks1 = Toplevel()
+    Multiple_clicks1 = tk.Toplevel()
     Multiple_clicks1.title("Record multiple clicks")
     Multiple_clicks1.geometry("284x175")
     Multiple_clicks1.grab_set()
     Multiple_clicks1.resizable(False, False)
     Multiple_clicks1.attributes('-topmost', 1)
     Multiple_clicks1.protocol("WM_DELETE_WINDOW", disable_x)
-    Checkbutton(Multiple_clicks1, text="Record and replay multiple clicks", onvalue=1, offvalue=0).place(x=10, y=12)
+    tk.Checkbutton(Multiple_clicks1, text="Record and replay multiple clicks", onvalue=1, offvalue=0).place(x=10, y=12)
     tk.Label(Multiple_clicks1, text='Click records:').place(x=10, y=45)
     tk.Entry(Multiple_clicks1, justify=tk.RIGHT, width=12).place(x=110, y=45)
     tk.Button(Multiple_clicks1, text='Pick point', padx="12", pady="15").place(x=192, y=50)
@@ -99,7 +98,7 @@ def Multiple_clicks():
 
 
 def Hotkey():
-    Hotkey1 = Toplevel()
+    Hotkey1 = tk.Toplevel()
     Hotkey1.title("Hotkey Setting")
     Hotkey1.geometry('230x110')
     Hotkey1.grab_set()
@@ -113,31 +112,31 @@ def Hotkey():
 
 
 def View():
-    View1 = Toplevel()
+    View1 = tk.Toplevel()
     View1.title("View Setting")
     View1.geometry("280x145")
     View1.grab_set()
     View1.resizable(False, False)
     View1.attributes('-topmost', 1)
     View1.protocol("WM_DELETE_WINDOW", disable_x)
-    Checkbutton(View1, text="Hide when it is clicking", onvalue=1, offvalue=0).place(x=10, y=10)  # переделать
-    Checkbutton(View1, text="Show when it finish clik", onvalue=1, offvalue=0).place(x=10, y=80)  # переделать
+    tk.Checkbutton(View1, text="Hide when it is clicking", onvalue=1, offvalue=0).place(x=10, y=10)  # переделать
+    tk.Checkbutton(View1, text="Show when it finish clik", onvalue=1, offvalue=0).place(x=10, y=80)  # переделать
     tk.Button(View1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)  # переделать
     tk.Button(View1, text='Cancel', font="Times 10", padx="7", pady="3", command=View1.destroy).place(x=148, y=134)  # переделать
 
 
 def Other():
-    Other1 = Toplevel()
+    Other1 = tk.Toplevel()
     Other1.title("Other Setting")
     Other1.geometry("252x170")
     Other1.grab_set()
     Other1.resizable(False, False)
     Other1.attributes('-topmost', 1)
     Other1.protocol("WM_DELETE_WINDOW", disable_x)
-    frame = LabelFrame(Other1, text='On click complete', padx="80", pady="19")   # переделать
+    frame = tk.LabelFrame(Other1, text='On click complete', padx="80", pady="19")   # переделать
     frame.place(x=5, y=6)                                     # переделать
     Combobox(frame, values=('Idle', 'Quit', 'Lock computer', 'Log off computer', 'Tum off computer', 'Standby', 'Hibemate (only if supported)'), width=15).grid(row=0, column=0)  # переделать
-    Checkbutton(Other1, text="Display balloon tip", onvalue=1, offvalue=0).place(x=10, y=85)  # переделать
+    tk.Checkbutton(Other1, text="Display balloon tip", onvalue=1, offvalue=0).place(x=10, y=85)  # переделать
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=130)  # переделать
     tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=130)  # переделать
 
