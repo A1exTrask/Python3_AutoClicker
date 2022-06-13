@@ -65,7 +65,7 @@ def Repeat():
     frame.place(x=5, y=6)
     Radiobutton(frame, text="Repeat", value=1).grid(row=0, column=0, sticky=W)  # переделать находится в центре
     Radiobutton(frame, text="Repeat until stopped", value=2).grid(row=1, column=0, sticky=W)  # переделать находится в центре
-    tk.Spinbox(frame, width=7, from_=1, to=16959).place(x=70, y=3)
+    tk.Spinbox(frame, width=7, justify=tk.RIGHT, from_=1, to=16959).place(x=70, y=3)
     tk.Label(frame, text='times', font='Times 10').place(x=130, y=3)
     tk.Label(Repeat1, text='interval:', font='Times 10').place(x=11, y=107)
     tk.Label(Repeat1, text='hours', font='Times 10').place(x=121, y=110)
