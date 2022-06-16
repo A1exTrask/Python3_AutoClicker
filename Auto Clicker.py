@@ -32,7 +32,6 @@ def tick():
 #  /////////////////////////////////////////////
 
 
-
 def disable_x():
     pass
 
@@ -46,9 +45,9 @@ def Options():
     Options1.attributes('-topmost', 1)
     Options1.protocol("WM_DELETE_WINDOW", disable_x)
     tk.Label(Options1, text='Mouse:', font='Times 10').place(x=11, y=14)
-    Combobox(Options1, values=('Left', 'Right', 'Middle'), width=8).place(x=63, y=14)
+    Combobox(Options1, values=('Left', 'Right', 'Middle'), state="readonly", width=8).place(x=63, y=14)
     tk.Label(Options1, text='Click:', font='Times 10').place(x=11, y=53)
-    Combobox(Options1, values=('Single', 'Double'), width=8).place(x=63, y=53)
+    Combobox(Options1, values=('Single', 'Double'), state="readonly", width=8).place(x=63, y=53)
     tk.Checkbutton(Options1, text="Freeze the pointer (only single clik)", onvalue=1, offvalue=0).place(x=10, y=92)
     tk.Button(Options1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=134)
     tk.Button(Options1, text='Cancel', font="Times 10", padx="7", pady="3", command=Options1.destroy).place(x=148, y=134)
@@ -136,7 +135,7 @@ def Other():
     Other1.protocol("WM_DELETE_WINDOW", disable_x)
     frame = tk.LabelFrame(Other1, text='On click complete', padx="80", pady="19")   # переделать
     frame.place(x=5, y=6)                                     # переделать
-    Combobox(frame, values=('Idle', 'Quit', 'Lock computer', 'Log off computer', 'Tum off computer', 'Standby', 'Hibemate (only if supported)'), width=15).grid(row=0, column=0)  # переделать
+    Combobox(frame, values=('Idle', 'Quit', 'Lock computer', 'Log off computer', 'Tum off computer', 'Standby', 'Hibemate (only if supported)'), state="readonly", width=15).grid(row=0, column=0)  # переделать
     tk.Checkbutton(Other1, text="Display balloon tip", onvalue=1, offvalue=0).place(x=10, y=85)  # переделать
     tk.Button(Other1, text='Ok', font="Times 10", padx="17", pady="3").place(x=56, y=130)  # переделать
     tk.Button(Other1, text='Cancel', font="Times 10", padx="7", pady="3", command=Other1.destroy).place(x=148, y=130)  # переделать
