@@ -26,6 +26,7 @@ def callback():
 def tick():
     if not isRun[0]:
         return
+    # root.after(3000, lambda: pyautogui.click(button='left'))
     pyautogui.click(button='left')
     root.after(time_interval, tick)
 
