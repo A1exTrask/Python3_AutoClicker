@@ -152,12 +152,12 @@ def About():
     messagebox.showinfo(title='About', message='Auto Clicker \n \n Version 1.0', icon='info')
 
 
-def show_window(icon, item):
+def show_window(icon):
     icon.stop()
     root.after(0, root.deiconify)
 
 
-def quit_window(icon, item):
+def quit_window(icon):
     icon.stop()
     root.quit()
 
