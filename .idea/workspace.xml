@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="Combobox">
+    <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="tick">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto Clicker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto Clicker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/блок мыши.py" beforeDir="false" afterPath="$PROJECT_DIR$/блок мыши.py" afterDir="false" />
@@ -43,12 +43,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/AlexTrask/Desktop/think/Python3_AutoClicker/блок мыши.py",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlexTrask/Desktop/think/Python3_AutoClicker/блок мыши.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.Auto Clicker">
     <configuration name="блок мыши" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Python3_AutoClicker" />
@@ -175,8 +175,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Auto Clicker" />
       <item itemvalue="Python.блок мыши" />
+      <item itemvalue="Python.Auto Clicker" />
       <item itemvalue="Python.Click counter" />
       <item itemvalue="Python.Clicker" />
     </list>
@@ -414,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655414799350</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Combobox">
+      <created>1655417017216</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1655417017216</updated>
+    </task>
+    <task id="LOCAL-00034" summary="tick">
+      <created>1655928762672</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1655928762672</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -449,6 +463,7 @@
     <MESSAGE value="Other" />
     <MESSAGE value="test" />
     <MESSAGE value="Combobox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Combobox" />
+    <MESSAGE value="tick" />
+    <option name="LAST_COMMIT_MESSAGE" value="tick" />
   </component>
 </project>

@@ -3,6 +3,8 @@ import webbrowser
 from tkinter import messagebox, W
 from tkinter.ttk import Combobox
 from tkinter.ttk import Radiobutton
+from PIL import Image
+from pystray import MenuItem, Menu, Icon
 
 import keyboard
 import pyautogui
@@ -150,6 +152,23 @@ def About():
     messagebox.showinfo(title='About', message='Auto Clicker \n \n Version 1.0', icon='info')
 
 
+def show_window(icon, item):
+    icon.stop()
+    root.after(0, root.deiconify)
+
+
+def quit_window(icon, item):
+    icon.stop()
+    root.quit()
+
+
+def withdraw_window():
+    root.withdraw()
+    icon = Icon('main', Image.open('1.ico'), 'Auto Clicker',
+                menu=Menu(MenuItem('Show', show_window), MenuItem('Exit', quit_window)))
+    icon.run()
+
+
 root = tk.Tk()
 x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2
 y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
@@ -158,6 +177,7 @@ root.geometry('230x110')
 root.title('Auto Clicker')
 root.resizable(False, False)
 root.attributes('-topmost', 1)
+root.protocol("WM_DELETE_WINDOW", withdraw_window)
 
 main_menu = tk.Menu()
 
