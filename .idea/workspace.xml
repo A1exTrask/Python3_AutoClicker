@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5331a1e-9110-4680-903e-2624f6fc47a3" name="Changes" comment="tray">
-      <change beforePath="$PROJECT_DIR$/Auto Clicker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto Clicker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/блок мыши.py" beforeDir="false" afterPath="$PROJECT_DIR$/блок мыши.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -434,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659292614600</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="tray">
+      <created>1659294356715</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1659294356715</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

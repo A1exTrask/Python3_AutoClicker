@@ -32,6 +32,7 @@ def tick():
     pyautogui.click(button='left')
     root.after(time_interval, tick)
 
+
 #  /////////////////////////////////////////////
 
 
@@ -162,7 +163,7 @@ def quit_window(icon):
     root.quit()
 
 
-def withdraw_window():
+def withdraw_window():  # Исправить клик в свернутом состоянии
     root.withdraw()
     icon = Icon('main', Image.open('1.ico'), 'Auto Clicker',
                 menu=Menu(MenuItem('Show', show_window), MenuItem('Exit', quit_window)))
